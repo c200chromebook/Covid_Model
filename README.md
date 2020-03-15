@@ -1,5 +1,3 @@
-# Covid_Model
-
 # Baseline Assumptions
 ## Simplifications:
 * Homogenous population

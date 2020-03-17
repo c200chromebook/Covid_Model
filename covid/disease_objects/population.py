@@ -39,6 +39,7 @@ class Population:
         ret = {str(state): cases for state, cases in self.state.report().items()}
         ret['DEAD'] = self.dead
         ret['UNINFECTED'] = self.uninfected
+        ret['RECOVERED'] = self.recovered
         return ret
 
 

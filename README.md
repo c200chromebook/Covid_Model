@@ -6,7 +6,7 @@ This is designed to be a dead simple, accesible-to-anyone, quick-and-dirty model
 * Homogenous population
 * Deterministic Model (for now)
 * Homogenous healthcare system (for now)
-* No Reinfection or Resurrections
+* No Reinfection
 * Timing medians are very near averages.
 * Deaths only occur in critical pool.
 * Homogenous Incubation Period (please send info on this!)

@@ -1,4 +1,4 @@
-# Introduction
+# Covid Model - Introduction and Purpose
 This is designed to be a dead simple, accesible-to-anyone, quick-and-dirty model of coronavirus for use in estimating viral spread in response to r<sub>0</sub> changes and consequent effects of the medical system.  It draws a disease course at time of infection and plays out that disease course. It should be easy to add mortality conditioned on healthcare demand, to add r0 reduction from NPIs, to test effects of asymptomatic individuals, etc. The assumptions are designed to be reasonable based on the linked studies.
 
 # Baseline Assumptions
@@ -43,3 +43,5 @@ This is designed to be a dead simple, accesible-to-anyone, quick-and-dirty model
 | :--: | 
 | ![Diseased People - USA](diseased_people.png) |
 | :--: | 
+
+This should not be considered an actuarial model for purposes of ASOP41.

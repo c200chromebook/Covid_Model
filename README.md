@@ -42,6 +42,6 @@ This is designed to be a dead simple, accesible-to-anyone, quick-and-dirty model
 | ![Disease Evolution](sample_disease_evol.png) |
 | :--: | 
 | ![Diseased People - USA](diseased_people.png) |
-| :--: | 
+
 
 This should not be considered an actuarial model for purposes of ASOP41.

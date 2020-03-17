@@ -8,7 +8,7 @@ class State:
     def __eq__(self, other):
         return self.state_name == other.state_name
 
-    def __init__(self, state_name, cfg: ConfigParser):
+    def __init__(self, cfg: ConfigParser, state_name):
         self.state_name = state_name
         if state_name in cfg['GROWTH_TIMING']:
             self.percent_of_infections = float(cfg['GROWTH_TIMING'][state_name])

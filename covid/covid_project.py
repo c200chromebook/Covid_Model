@@ -1,13 +1,10 @@
 import configparser
 from covid.disease_objects.population import Population
 
-def main():
-    cfg = configparser.ConfigParser()
-    cfg.read("../Baseline.ini")
-    pop = Population(cfg)
-    print("OK")
+
+cfg = configparser.ConfigParser()
+cfg.read("../Baseline.ini")
+pop = Population(cfg)
+backfill = pop.disease.backfill(15)
 
 
-
-if __name__ == '__main__':
-    main()

@@ -1,9 +1,5 @@
-# Sample Results
-| ![Disease Evolution](sample_disease_evol.png) |
-| :--: | 
-| ![Diseased People - USA](diseased_people.png) |
-| :--: | 
-
+# Introduction
+This is designed to be a dead simple, accesible-to-anyone, quick-and-dirty model of coronavirus for use in estimating viral spread in response to r<sub>0</sub> changes and consequent effects of the medical system.  It draws a disease course at time of infection and plays out that disease course. It should be easy to add mortality conditioned on healthcare demand, to add r0 reduction from NPIs, to test effects of asymptomatic individuals, etc. The assumptions are designed to be reasonable based on the linked studies.
 
 # Baseline Assumptions
 ## Simplifications:
@@ -42,3 +38,8 @@
 * Hospitalized Day 7
 * On Vent Day 12
 * Dead Day 19
+# Sample Results
+| ![Disease Evolution](sample_disease_evol.png) |
+| :--: | 
+| ![Diseased People - USA](diseased_people.png) |
+| :--: | 

@@ -1,5 +1,6 @@
 # Sample Results
 | ![Disease Evolution](sample_disease_evol.png) |
+| :--: | 
 | ![Diseased People - USA](diseased_people.png) |
 | :--: | 
 

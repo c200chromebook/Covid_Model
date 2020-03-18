@@ -1,4 +1,5 @@
 from collections import defaultdict
+from datetime import timedelta
 
 from covid.disease_objects.course import Course
 
@@ -11,8 +12,10 @@ class DiseaseState:
     def infect(self, n):
         [state.infect(n * state.course.probability) for state in self.course_states]
 
-    def roll_nightly(self):
-        contacts, deaths, recoveries = map(sum, zip(*[state.roll(self.disease.r0) for state in self.course_states]))
+    def roll_nightly(self, growth_mult=None):
+        contacts, deaths, recoveries = map(sum, zip(*[state.roll(r0=self.disease.r0, growth_mult=growth_mult)
+                                                      for state
+                                                      in self.course_states]))
         return contacts, deaths, recoveries
 
     def report(self):
@@ -37,13 +40,18 @@ class Disease:
         self.courses = [Course(cfg, course, self.states) for course in cfg['COURSES']]
         assert sum(course.probability for course in self.courses) == 1.0
 
-    def backfill(self, aging_days, sick):
+    def backfill(self, aging_days, sick, startdate=None, multipliers=None):
         # Runs ignoring population immunity, assumed irrelevant early outbreak.
         state = DiseaseState(self)
         state.infect(1)
+        use_mutiples = startdate and multipliers
+        if use_mutiples:
+            curdate = startdate - timedelta(days=aging_days)
         for _ in range(aging_days):
-            contacts, deaths, recoveries = state.roll_nightly()
+            contacts, deaths, recoveries = state.roll_nightly(growth_mult=multipliers[curdate] if use_mutiples else 1.0)
             state.infect(contacts)
+            if startdate and multipliers:
+                curdate += timedelta(days=1)
 
         report = state.report()
         visible_cases = sum([cases for state, cases in report.items() if state.visible])

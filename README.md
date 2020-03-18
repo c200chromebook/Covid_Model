@@ -6,7 +6,7 @@ This is designed to be a dead simple, accesible-to-anyone, quick-and-dirty model
 * Homogenous population
 * Deterministic Model (for now)
 * Homogenous healthcare system (for now)
-* No Reinfection or Resurrections
+* No Reinfection
 * Timing medians are very near averages.
 * Deaths only occur in critical pool.
 * Homogenous Incubation Period (please send info on this!)
@@ -44,4 +44,4 @@ This is designed to be a dead simple, accesible-to-anyone, quick-and-dirty model
 | ![Diseased People - USA](diseased_people.png) |
 
 
-This should not be considered an actuarial model for purposes of ASOP41.
+This should not be considered any sort of actuarial model or communication.

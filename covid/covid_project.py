@@ -28,4 +28,4 @@ chart1 = results[['UNINFECTED', 'INCUBATION', 'INFECTIOUS', 'SICK', 'HOSPITAL', 
     .plot.area()
 chart2 = results[['NEW_INFECTED']].plot.area()
 chart2 = results[['R_E']].plot.area()
-q = multipliers[datetime(year=2020,month=11,day=1)]
+results.to_clipboard(excel=True)

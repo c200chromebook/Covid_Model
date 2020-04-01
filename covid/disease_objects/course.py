@@ -58,9 +58,12 @@ class Course:
         daily_infection_fraction = {}
         for state in total_state_days:
             daily_infection_fraction[state] = state.percent_of_infections / float(total_state_days[state])
-        self.infection_fraction_vec = [daily_infection_fraction[state]
+        unadjusted_infection_frac_vec = [daily_infection_fraction[state]
                                        for state, days in self.disease_course
                                        for _ in range(days)]
+        sum_inf_frac = sum(unadjusted_infection_frac_vec)
+        assert sum_inf_frac  # Could relax this constraint.
+        self.infection_fraction_vec = [frac/sum_inf_frac for frac in unadjusted_infection_frac_vec]
 
 
     @property

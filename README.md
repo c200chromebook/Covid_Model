@@ -10,10 +10,10 @@ This is designed to be a dead simple, accesible-to-anyone, quick-and-dirty model
 * Timing medians are very near averages.
 * Deaths only occur in critical pool.
 * Homogenous Incubation Period (please send info on this!)
-* Asymptomatic people don't infect [(This is wrong!)](https://www.medrxiv.org/content/10.1101/2020.02.20.20025866v2)
+* 20% Asymptomatic Infection
 * Spread happens while in incubation or while sick
 ## Disease Characteristics
-* Basic Reproductive Number, R<sub>0</sub> = [2.28](https://www.ijidonline.com/article/S1201-9712(20)30091-6/fulltext)
+* Basic Reproductive Number, R<sub>0</sub> = [2.3](https://www.ijidonline.com/article/S1201-9712(20)30091-6/fulltext)
 * Case Fatality Rate = [2.3](https://jamanetwork.com/journals/jama/fullarticle/2762130)
 ## Disease Course
 ### Incubation 
@@ -42,6 +42,9 @@ This is designed to be a dead simple, accesible-to-anyone, quick-and-dirty model
 | ![Disease Evolution](sample_disease_evol.png) |
 | :--: | 
 | ![Diseased People - USA](diseased_people.png) |
-
+# Mitigated Results
+| ![Mitigated Evolution](mitigated_evol.png) |
+| :--: | 
+| ![Mitigated_Infections](mitigated_inf.png) |
 
 This should not be considered any sort of actuarial model or communication.
